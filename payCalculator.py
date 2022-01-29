@@ -13,8 +13,6 @@ def calculatePay():
         else:
             overTimeHrs = 0
             regularHrs = floatHrs
-        pay = regularHrs * floatRate + overTimeHrs * floatRate * 1.5
-        print("Pay:", pay)
     except:
         print("Error, please enter numeric input")
     rate = input("Enter Rate: ")
