@@ -1,11 +1,13 @@
 def calculatePay():  
     # This first line is provided for you
     hrs = input("Enter Hours: ")
+    float(floatHrs)
     try:
         floatHrs = float(hrs)
     except:
         print("Enter Hours: ")
     rate = input("Enter Rate: ")
+    float(floatRate)
     try:
         floatRate = float(rate)
     except:
