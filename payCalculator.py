@@ -1,23 +1,21 @@
 def calculatePay():  
     # This first line is provided for you
     hrs = input("Enter Hours: ")
-    float(floatHrs)
     try:
         floatHrs = float(hrs)
+        if floatHrs > 40:
+            overTimeHrs = floatHrs - 40
+            regularHrs = 40
+        else:
+            overTimeHrs = 0
+            regularHrs = floatHrs
     except:
         print("Enter Hours: ")
     rate = input("Enter Rate: ")
-    float(floatRate)
     try:
         floatRate = float(rate)
     except:
         print("Enter rate: ")
-    if floatHrs > 40:
-        overTimeHrs = floatHrs - 40
-        regularHrs = 40
-    else:
-        overTimeHrs = 0
-        regularHrs = floatHrs
     pay = regularHrs * floatRate + overTimeHrs * floatRate * 1.5
     print("Pay:", pay)
     # end assignment
