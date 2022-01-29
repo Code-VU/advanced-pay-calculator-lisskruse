@@ -13,16 +13,18 @@ def calculatePay():
         else:
             overTimeHrs = 0
             regularHrs = floatHrs
+        pay = regularHrs * floatRate + overTimeHrs * floatRate * 1.5
+        print("Pay:", pay)
     except:
-        print("Please enter a number.")
+        print("Error, please enter numeric input")
     rate = input("Enter Rate: ")
     try:
         floatRate = float(rate)
+        pay = regularHrs * floatRate + overTimeHrs * floatRate * 1.5
+        print("Pay:", pay)
     except:
-        print("Please enter a number.")
-    pay = regularHrs * floatRate + overTimeHrs * floatRate * 1.5
-    print("Pay:", pay)
-    # end assignment
+        print("Error, please enter numeric input")
+        # end assignment
 
 ## if you want to test locally before you try to sync
 ## uncomment calculatePay() and run > python payCalculator.py
